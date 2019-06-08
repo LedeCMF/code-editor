@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <lede-code-editor @update="doUpdate" ref="codeEditor" :auto-p="true"></lede-code-editor>
+        <lede-code-editor @update="doUpdate" ref="codeEditor" :auto-p="true" value="<p>Jamie</p>"></lede-code-editor>
 
         {{ code }}
     </div>
@@ -19,7 +19,7 @@
 
         data() {
             return {
-                code: '',
+                code: '<p>Jam,ie</p>',
             }
         },
 
@@ -32,7 +32,6 @@
 </script>
 
 <style lang="scss">
-    $dialog-border-color: rgb(240, 240, 240);
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -44,7 +43,7 @@
 
     }
 
-
+    $dialog-border-color: rgb(240, 240, 240);
     .lede-code-toolbar {
         border: 1px solid $dialog-border-color;
     }

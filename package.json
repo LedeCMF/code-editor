@@ -53,5 +53,9 @@
   },
   "peerDependencies": {
     "vue": "^2.6.10"
-  }
+  },
+  "files": [
+    "src",
+    "dist"
+  ]
 }

@@ -28,6 +28,7 @@
 
         computed: {
             buttons() {
+
                 let items = this.items.split(' ').map((item) => {return item.trim()})
                     .filter((item) => item.length > 0)
                 let buttons = [];
@@ -48,7 +49,7 @@
 
         methods: {
             doCommand(button) {
-                button.command.exec(this.codeMirror);
+                button.command.exec(this.codeMirror, this);
             },
         },
     }

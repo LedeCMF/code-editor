@@ -2,7 +2,7 @@
     <div class="lede-code-editor">
         <editor-toolbar v-if="toolbar" :items="toolbar" :code-mirror="codeMirror"></editor-toolbar>
         <div class="code-editor-container" ref="container">
-            <textarea class="lede-code-editor" ref="textarea"></textarea>
+            <textarea class="lede-code-editor" ref="textarea" :value="value"></textarea>
         </div>
         <div class="code-editor-resize"
              ref="resize"

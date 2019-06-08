@@ -24,7 +24,7 @@ export class WrapCommand {
         this._close = close
     }
     
-    exec(codeMirror) {
+    exec(codeMirror, Editor) {
         CMWrapCommand(codeMirror, this._open, this._close);
     }
 }

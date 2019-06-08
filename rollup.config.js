@@ -11,6 +11,13 @@ const extensions = ['.js', '.vue']
 const isProduction = !process.env.ROLLUP_WATCH
 const globals = {vue: 'Vue'}
 
+const banner = `
+    /*!
+    * ${pkg.name} v${pkg.version}
+    * (c) ${new Date().getFullYear()} HollyIT (limited liability)
+    * @license MIT
+    */
+  `
 
 const plugins = [
     css(),
@@ -43,10 +50,12 @@ export default {
     output: [
         {
             format: 'cjs',
+            banner,
             file: pkg['main']
         },
         {
             format: 'es',
+            banner,
             file: pkg['module']
         }
     ]
